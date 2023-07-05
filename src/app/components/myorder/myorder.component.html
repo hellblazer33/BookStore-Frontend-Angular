@@ -1,0 +1,30 @@
+
+<div>
+    <div class="topbox">
+        <div class="topinbox">
+            <div class="txtBook">
+                Home /
+            </div>
+            <div class="subtxt">My Orders ({{noofOrders}})</div>
+        </div>
+    </div>
+    <div class="outerOrderBox" *ngFor="let order of orderArray">
+        <div class="innerOrderBox">
+            <div class="imgBox">
+                <img class="imgs" src="/assets/dont.png">
+            </div>
+            <div class="detailsBox">
+                <span class="bookttl">{{order.bookmodel.bookName}}</span>
+                <span class="authorttl">by {{order.bookmodel.authorName}}</span>
+                <div class="priceBox">
+                    <span class="discprice">Rs. {{order.totalPrice}}</span>
+                    <!-- <span class="actprice">Rs. {{order.totalDiscountedPrice}}</span> -->
+                </div>
+            </div>
+            <div class="dateBox">
+                <img src="/assets/greendot.png" class="dotImg">
+                <span class="dateTxt" >Order Placed on {{getDate(order?.orderDate)}}</span>
+            </div>
+        </div>
+    </div>
+</div>

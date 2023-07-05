@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="head">
+        <div class="bookHead">
+            <span class="txtbook">Books</span>
+            <span class="booksCount">({{noofBooks}} items)</span>
+        </div>
+        <select class="dropselect" (change)="sortBookByPrice($event.target)">
+            <option selected value="undefined" disabled>Choose Category</option>
+            <option value="Sort by relevance">Sort by relevance</option>
+            <option value="Price: Low to High">Price: Low to High</option>
+            <option value="Price: High to Low">Price: High to Low</option>
+            <option value="Newest Arrivals">Newest Arrivals</option>
+        </select>
+    </div>
+
+    <div class="display">
+        <!-- Here in filter pipe it'll filter searched result in the variable searchBook  -->
+        <mat-card class="bookBox" *ngFor="let book of bookArray" (click)="quickVeiwPage(book)">
+            <div class="imageBox">
+                <div class="inimageBox">
+                    <img class="image" src="/assets/dont.png" >
+                </div>
+            </div>
+            <div class="dataBox">
+                <div class="booktextBox">
+                    <div class="titletxt">
+                        <!-- use "?"" to apply the null check until the response arrives. -->
+                        <span>{{book?.bookName}}</span>
+                    </div>
+                    <div class="authortxt">
+                        <span>by {{book?.authorName
+                        }}</span>
+                    </div>
+                    <div class="ratingBox">
+                        <div class="starBox">
+                            <span>{{book?.rating
+                            }}</span>
+                            <img src="/assets/star.jpg" class="starimg">
+                        </div>
+                        <span class="ratingCount">({{book?.totalRating}})</span>
+                    </div>
+                    <div class="aaaa">
+                        <div class="priceBox">
+                            <span class="discountPrice">Rs. {{book?.discountPrice}}</span>
+                            <span class="originalPrice">Rs. {{book?.originalPrice}}</span>                            
+                        </div>
+                        <!-- <div class="wishCartBtn">
+                            <div class="smallIcon">
+                                <img class="bothImg" src="/assets/cart.png" >
+                            </div>
+                            <div class="smallIcon">
+                                <img class="bothImg" src="/assets/coloredHeart.png">
+                            </div>
+
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </mat-card>        
+    </div>
+    
+</div>

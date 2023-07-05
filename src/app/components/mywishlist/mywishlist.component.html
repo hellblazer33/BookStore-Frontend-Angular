@@ -1,0 +1,36 @@
+<div>
+    <div class="topbox">
+        <div class="topinbox">
+            <div class="txtBook">
+                Home /
+            </div>
+            <div class="subtxt">My Wishlist</div>
+        </div>
+    </div>
+
+    <div class="wishBox">
+        <span class="wishTxt">My Wishlist({{noofWishlist}})</span>
+    </div>  
+    <div class="Box" *ngFor="let wish of wishArray">
+        <div class="innerBox">
+            <div class="imgBox1">
+                <div class="iimmgg">
+                    <img class="smallimg" src="/assets/dont.png" />
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <span class="bookttl">{{wish.bookmodel.bookName}}</span>
+                        <span class="subtitle">by {{wish.bookmodel.authorName}}</span>
+                        <div class="price">
+                            <span>Rs. {{wish.bookmodel.discountPrice}}</span>
+                            <span class="actprice" >Rs. {{wish.bookmodel.originalPrice}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="delete">
+                    <img  class="trashimg" src="/assets/trash.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,282 @@
+.topbox {
+    display: flex;
+    position: relative;
+    left: 15.3vw;
+    width: 70vw;
+    top: 3vh;
+    height: 5vh;
+    align-Items: center;
+}
+
+.topinbox {
+    display: flex;
+    position: relative;
+    align-Items: center;
+    width: 150px;
+    color: #9D9D9D;
+
+}
+
+.txtBook {
+    font-Size: 13px;
+    font-Weight: 500;
+}
+
+.subtxt {
+    position: relative;
+    left: 5px;
+    font-Size: 12px;
+    font-Weight: 500;
+    color: black;
+}
+
+//OrderBox
+
+.outerOrderBox{
+    border: 1px solid #E4E4E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70vw;
+    height: 27vh;
+    left: 15.3vw;
+    top: 8vh;
+}
+.innerOrderBox{
+    display: flex;
+    width: 64vw;
+    height: 17vh;
+}
+.imgBox{
+    width: 9vw;
+}
+.imgs{
+    width: 70%;
+    height: 100%;
+}
+.detailsBox{
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+}
+.bookttl{
+    font-size: 21px;
+    display: flex;
+    font-weight: 500;
+    height: 5vh;
+    align-items: center;
+}
+.authorttl{
+    font-size: 14px;
+    display: flex;
+    font-weight: 400;
+    height: 5vh;
+    align-items: center;
+    color:#9D9D9D;
+}
+.priceBox{
+    display: flex;
+    width: 11vw;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;   
+}
+.discprice{
+    font-size: 20px;
+    font-weight: 650;
+}
+.actprice{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration-line: line-through;
+    color: #9D9D9D;
+}
+.dateBox{
+    width: 15vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+.dotImg{
+    height: 15px;
+    width:  12px;
+}
+.dateTxt{
+    position: relative;
+    left: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+//Media Queries
+
+@media (min-width: 320px) and (max-width: 480px){
+    .topbox {
+        left: 10%;
+        width: 80%;
+        top: 1vh;
+    }
+    .outerOrderBox{
+        width: 80%;
+        height: 15vh;
+        left: 10%;   
+        top: 3vh;
+    }
+    .innerOrderBox{
+        width: 90%;   
+        height: 10vh;
+    }
+    .imgBox{    
+        width: 30%;
+    }
+    .imgs{
+        width: 70%;   
+        height: 100%;
+    }
+    .detailsBox{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookttl{
+        font-size: 17px;
+        font-weight: 500;
+        width: 100%;
+    }
+    .authorttl{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .priceBox{
+        width: 120px;  
+    }
+    .discprice{
+        font-size: 15px;
+        font-weight: 550;
+    }
+    .actprice{
+        font-size: 12px;
+        font-weight: 450;
+    }
+    .dateBox{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 720px){
+    .topbox {
+        left: 8%;
+        width: 80%;
+        top: 1vh;
+    }
+    .outerOrderBox{
+        width: 80%;
+        height: 15vh;
+        left: 8%;   
+        top: 3vh;
+    }
+    .innerOrderBox{
+        width: 90%;   
+        height: 10vh;
+    }
+    .imgBox{    
+        width: 80px;
+    }
+    .imgs{
+        width: 60px;   
+        height: 100%;
+    }
+    .detailsBox{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookttl{
+        font-size: 17px;
+        font-weight: 500;
+        width: 100%;
+    }
+    .authorttl{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .priceBox{
+        width: 120px;  
+    }
+    .discprice{
+        font-size: 15px;
+        font-weight: 550;
+    }
+    .actprice{
+        font-size: 12px;
+        font-weight: 450;
+    }
+    .dateBox{
+        display: none;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1280px){
+    .topbox {
+        left: 8%;
+        width: 80%;
+        top: 1vh;
+    }
+    .outerOrderBox{
+        width: 80%;
+        height: 18vh;
+        left: 8%;   
+        top: 3vh;
+    }
+    .innerOrderBox{
+        width: 90%;   
+        height: 13vh;
+    }
+    .imgBox{    
+        width: 100px;
+    }
+    .imgs{
+        width: 60px;   
+        height: 100%;
+    }
+    .detailsBox{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookttl{
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+    }
+    .authorttl{
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .priceBox{
+        width: 140px;  
+    }
+    .discprice{
+        font-size: 17px;
+        font-weight: 550;
+    }
+    .actprice{
+        font-size: 13px;
+        font-weight: 450;
+    }
+    .dateBox{
+        position: relative;
+        height: 50px;
+        top: 20px;
+        width: 140px;
+    }
+    .dotImg{
+        height: 15px;
+        width:  12px;
+    }
+    .dateTxt{
+        font-size: 12px;
+        font-weight: 600;
+    }
+}

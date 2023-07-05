@@ -1,0 +1,101 @@
+<div>
+    <div class="topbox">
+        <div class="topinbox">
+            <div class="txtBook" (click)="navhome()">
+                Home /
+            </div>
+            <div class="subtxt">Book ({{bookId}})</div>
+        </div>
+    </div>
+    <div class="fullDatabox">
+        <div class="onlyImagesbox">
+            <div class="box1">
+                <img class="imgs" src="/assets/dont.png" />
+                <img class="imgs" src="/assets/backcover.jpg" />
+            </div>
+            <div class="box2">
+                <div class="bigImg">
+                    <img class="mainImg" src="/assets/dont2.png" />
+                </div>
+                <div class="add2Tag">
+                    <button mat-flat-button class="btnbag" (click)="addToCart()">ADD TO BAG</button>
+                    <button mat-flat-button class="btnwish" (click)="addToWishlist()">
+                        <img src="/assets/favourite1.png" class="favicon">
+                        WISHLIST
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="textAreaBox">
+            <div class="dataBox">
+                <div class="booktextBox">
+                    <div class="titletxt">
+                        {{book?.bookName}}
+                    </div>
+                    <div class="authortxt">
+                        by {{book?.authorName}}
+                    </div>
+                    <div class="ratingBox">
+                        <div class="star">
+                            <span>{{book?.rating}}</span>
+                            <img src="/assets/star.jpg" class="starimg">
+                        </div>
+                        <span>({{book?.totalRating}})</span>
+                    </div>
+                    <div class="priceBox">
+                        <span>Rs.{{book?.discountPrice}} </span>
+                        <span class="actPrice">Rs.{{book?.originalPrice}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detailBox">
+                <div class="dtltxt">• Book Details</div>
+                <div class="para">
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde reiciendis veritatis praesentium
+                    nemo vel alias repudiandae repellat accusantium, enim id temporibus vitae illo accusamus eos
+                    dignissimos fuga rerum odit. -->
+                    {{book?.description}}
+                </div>
+            </div>
+            <div class="custRate">
+                <div class="custTxt">Customer Feedback</div>
+                <div class="overallRatingBox">
+                    <div class="inOverall">Overall Rating
+                        <span class="star5Box">
+                            <img class="star5in" src="/assets/starRate.png">
+                            <img class="star5in" src="/assets/starRate.png">
+                            <img class="star5in" src="/assets/starRate.png">
+                            <img class="star5in" src="/assets/starRate.png">
+                            <img class="star5in" src="/assets/starRate.png">
+                        </span>
+                        <div class="txtBox">
+                            <!-- [(ngModel)]="comment" used for the two way data binding for thi import formsModule in .ts file  -->
+                            <textarea type="text" class="txtarea" placeholder='Write your review...'
+                                [(ngModel)]="comment"></textarea>
+                        </div>
+                        <div class="submit">
+                            <button mat-flat-button class="subbtn" (click)="addFeedback()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewbox" *ngFor="let feed of feedbackArray">
+                <div class="tagName">
+                    <span class="roundtxt">HD</span>
+                    <div class="nametxt">Pankaj Kumar </div>
+                </div>
+                <div class="yellow5star">
+                    <img class="yellowStar" src="/assets/yellowStar.png">
+                    <img class="yellowStar" src="/assets/yellowStar.png">
+                    <img class="yellowStar" src="/assets/yellowStar.png">
+                    <img class="whiteStar" src="/assets/starRate.png">
+                    <img class="whiteStar" src="/assets/starRate.png">
+                </div>
+                <div class="reviewTxt">
+                    <!-- <span>Good product. Even though the translation could have been better.</span> -->
+                    <span>{{feed?.comment}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,160 @@
+<div>
+    <div class="topBox">
+        <div class="topinBox">
+            <div class="txtBook">
+                Home /
+            </div>
+            <div class="subtxt">My Cart</div>
+        </div>
+    </div>
+    <!-- <div *ngIf="(cartArray.length==0)" class="emptyCart"> Cart Is Empty</div> -->
+
+    <div>
+        <div class="cartBox">
+            <div class="cartTxt" >
+                <div>
+                    <span>My Cart ({{noofCart}})</span>
+                </div>
+                <div>
+                    <select class="location">
+                        <option> Use Current Location</option>
+                        <option>Bhandara</option>
+                        <option>Nagpur</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                    </select>
+                </div>
+            </div>
+            <div *ngIf="(cartArray.length==0)" class="emptyCart1"> Cart Is Empty</div>
+
+            <div class="mainData" *ngFor="let cart of cartArray">
+                
+                <div class="imgBox">
+                    <img class="immg" src="/assets/dont.png">
+                </div>
+                <div class="dataBox">
+                    <div class="title">
+                        <span class="bookttl">{{cart.bookmodel.bookName}}</span>
+                        <span class="authttl">by {{cart.bookmodel.authorName}}</span>
+                        <div class="price">
+                            <span class="discprice">Rs {{cart.bookmodel.discountPrice}}</span>
+                            <span class="actprice">Rs {{cart.bookmodel.originalPrice}}</span>
+                        </div>
+                    </div>
+                    <div class="incdecBox">
+                        <div class="innerincdecBox">
+                            <!-- <button mat-stroked-button class="signs">-</button> -->
+                            <div class="signs" >-</div>
+                            <span class="cartQty">{{cart.quantity}}</span>
+                            <div class="signs"  >+</div>
+                            <!-- <button mat-stroked-button class="signs">+</button> -->
+                            <button mat-button class="removebtn"> Remove</button>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>
+            <div class="placeBtn">
+                <!-- ngIf takes boolean value so  -->
+                <button mat-flat-button class="inPlacebtn" (click)="openAddress()" *ngIf="hideButton && !(cartArray?.length<1)" >PLACE ORDER</button>
+            </div>
+        </div>
+
+        <div class="addressBox" *ngIf="hideShowAddress">
+            <div class="innerAddBox">
+                Address Details
+            </div>
+        </div>
+
+        <!-- /Address2 -->
+        <div class="customerBox" *ngIf="!hideShowAddress" >
+            <div class="innerCustleft" >
+                <div class="custtxt">Customer Details</div>
+                <div >
+                <div class="twoTxtfields" >
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">Full Name</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
+                            <input matInput placeholder="" [(ngModel)]="fullName">
+                        </mat-form-field>
+                    </div>
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">Mobile Number</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" [(ngModel)]="mobileNumber">
+                        </mat-form-field>
+                    </div>
+                </div>
+               
+                  <div class="addTxt" >Address</div>
+                  <div class="txtarea">
+                    <textarea class="area" [(ngModel)]="address"></textarea>
+                  </div>
+                  <div class="nexttwoTxtfields" >
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">City/Town</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" [(ngModel)]="city">
+                        </mat-form-field>
+                    </div>
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">State</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" [(ngModel)]="state">
+                        </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="radioBtn" #id (change)="radioOptions($event.target)">
+                    <label class="typeBox">Type :</label>
+                    <mat-radio-group class="inradio3">
+                      <mat-radio-button name="radio" value="1" type="radio" id="1" ngDefaultControl [(ngModel)]="typeId">Home</mat-radio-button>
+                      <mat-radio-button name="radio" value="2" type="radio" id="2" ngDefaultControl [(ngModel)]="typeId">Work</mat-radio-button>
+                      <mat-radio-button name="radio" value="3" type="radio" id="3" ngDefaultControl [(ngModel)]="typeId">Other</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </div>
+            </div>
+            <div class="innerCustright">
+                <div class="addressBtn">
+                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;" (click)="addNewAddress()">Add New Address</button>
+                </div>
+                <div class="continueBtn">
+                    <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;" *ngIf="hideContinue" (click)="openContinue()">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="orderBox" *ngIf="hideContinue">
+            <div class="innerAddBox">
+                Order Summary
+            </div>
+        </div>
+
+        <!-- order 2 -->
+        <div class="orderBox2" *ngIf="!hideShowOrder">
+            <div class="orderTxt">
+                <div>
+                    <span>Order Summary</span>
+                </div>
+            </div>
+            <div class="orderData" *ngFor="let cart of cartArray">
+                <div class="orderimgBox">
+                    <img class="immgorder" src="/assets/dont.png">
+                </div>
+                <div class="orderdataBox">
+                    <div>
+                        <div class="titleorder">
+                            <span class="bookttlorder">{{cart.bookmodel.bookName }}</span>
+                            <span class="authttlorder">by {{cart.bookmodel.authorName}}</span>
+                            <div class="priceorder">
+                                <span class="discpriceorder">Rs. {{cart.bookmodel.discountPrice}}</span>
+                                <span class="actpriceorder">Rs. {{cart.bookmodel.originalPrice}}</span>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>               
+            </div>
+             <div class="checkBtn">
+                <button mat-flat-button class="incheckbtn">Checkout</button>
+            </div>
+    </div>
+</div>

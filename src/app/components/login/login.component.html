@@ -12,9 +12,9 @@
                 <div class="subContainer">
                     <div class="twoBtn">
                         <button mat-flat-button class="twoBtn1">LOGIN</button>
-                        <button mat-flat-button class="twoBtn2">SIGNUP</button>                    
+                        <button mat-flat-button class="twoBtn2" (click)="navigate()">SIGNUP</button>                    
                     </div>                    
-                    <form  class="formbox">                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formbox">                    
                         <div class="txtbox">
                             <label class="txtboxlbl" >Email Id</label> 
                             <mat-form-field appearance="outline" class="txtfield" >
@@ -33,14 +33,14 @@
                             <button mat-flat-button type="button" class="fgtbtn" routerLink="/forget" >Forgot Password?</button> 
                         </div>
                         <div class="loginBox">
-                            <button mat-raised-button type="submit" class="login">Login</button>
+                            <button mat-raised-button type="submit" class="login" (click)=onSubmit()>Login</button>
                         </div>    
                     </form>            
                     <div class="orTxt">
                        -- OR --
                     </div>                
                     <div class="btns" >
-                        <button mat-raised-button class="fbBtn" color="primary" type="button">Admin</button>
+                        <button mat-raised-button class="fbBtn" color="primary" type="button" (click)="navAdmin()">Admin</button>
                         <button mat-raised-button class="btn-google" type="button">Google</button>
                     </div>            
                 </div>

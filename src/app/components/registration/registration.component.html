@@ -1,0 +1,54 @@
+<div class="logbox">
+    <div class="both">
+        <div class="container" >
+            <div class="imgbox">
+                <img class="shop-img" src="../../../assets/shopping.png">
+                <div class="text">
+                    <p >ONLINE BOOK SHOPPING</p>
+                </div>
+            </div> 
+              
+            <div class="reg-container">
+                <div class="subContainer">
+                    <div class="twoBtn">
+                        <button mat-flat-button class="twoBtn2" (click)="navigate()" >LOGIN</button>
+                        <button mat-flat-button class="twoBtn1" >SIGNUP</button>                    
+                    </div>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="formbox">   
+                    <div class="txtbox">
+                        <label class="txtboxlbl">Full Name</label>
+                        <mat-form-field appearance="outline" class="txtfield" >
+                            <input matInput placeholder="" formControlName="fullName" />
+                            <mat-error>Enter Full Name</mat-error>
+                        </mat-form-field>
+                    </div>  
+                    <div class="txtbox">
+                        <label class="txtboxlbl">Email Id</label>
+                        <mat-form-field appearance="outline" class="txtfield">
+                            <input matInput placeholder="" formControlName="emailId" />
+                            <mat-error>Email required</mat-error>
+                        </mat-form-field>
+                    </div>  
+                    <div class="txtbox">
+                        <label class="txtboxlbl">Password</label>
+                        <mat-form-field appearance="outline" class="txtfield">
+                            <input matInput placeholder="" formControlName="password"/>
+                            <mat-error>Password required</mat-error>
+                        </mat-form-field>
+                    </div>  
+                    <div class="txtbox">
+                        <label class="txtboxlbl">Mobile Number</label>
+                        <mat-form-field appearance="outline" class="txtfield">
+                            <input matInput placeholder="" formControlName="mobileNumber" />
+                            <mat-error>Number required</mat-error>
+                        </mat-form-field>
+                    </div>  
+                    <div class="loginBox">
+                        <button mat-raised-button type="submit" class="signup" (click)=onSubmit() >SignUp</button>
+                    </div> 
+                    </form>                
+                </div>
+            </div> 
+        </div>
+    </div>   
+</div>

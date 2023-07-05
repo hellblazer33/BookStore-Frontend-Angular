@@ -1,0 +1,949 @@
+.topBox {
+    display: flex;
+    position: relative;
+    left: 15.3vw;
+    width: 69.5vw;
+    top: 3vh;
+    align-Items: center;
+}
+
+.topinBox {
+    display: flex;
+    position: relative;
+    align-Items: center;
+    width: 13%;
+    color: #9D9D9D;
+
+}
+
+.txtBook {
+    font-Size: 13px;
+    font-Weight: 500;
+
+}
+
+.subtxt {
+    position: relative;
+    left: 5px;
+    font-Size: 12px;
+    font-Weight: 500;
+    color: black;
+
+}
+
+//
+
+.cartBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 55.5vw;
+    box-sizing: border-box;
+    left: 15vw;
+    // height: 38vh;
+    top: 8vh;
+    align-items: center;
+}
+
+.cartTxt {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.location {
+    height: 5vh;
+    width: 19vw;
+    outline: none;
+    font-size: 17px;
+}
+
+.emptyCart {
+    position: relative;
+    height: 10vh;
+    width: 68.5vw;
+    left: 15.5vw;
+    top: 30vh;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.emptyCart1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mainData {
+    display: flex;
+    width: 90%;
+    height: 27vh !important;
+
+}
+
+.imgBox {
+    display: flex;
+    position: relative;
+    top: 10px;
+    height: 60%;
+    width: 15%;
+}
+
+.immg {
+    height: 85%;
+    width: 75%;
+}
+
+.dataBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: 75% !important;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 90%;
+    left: 2vw;
+
+}
+
+.bookttl {
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.authttl {
+    position: relative;
+    top: 5px;
+    font-size: 15px;
+    font-weight: 450;
+    color: #9D9D9D;
+}
+
+.price {
+    display: flex;
+    position: relative;
+    top: 3vh;
+    width: 150px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.discprice {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.actprice {
+    font-size: 14px;
+    font-weight: 500;
+    color: #878787;
+    text-decoration-line: line-through;
+}
+
+.incdecBox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 7vh;
+    width: 50%;
+    height: 20%;
+    left: 2vw;
+}
+
+.innerincdecBox {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.signs {
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 50%;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cartQty {
+    padding: 5px 20px 5px 20px;
+    margin: 0px 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: rgba(0, 0, 0, .12);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.removebtn {
+    position: relative;
+    left: 2vw;
+}
+
+.placeBtn {
+    display: flex;
+    position: relative;
+    width: 90%;
+    bottom: 2vh;
+    justify-content: flex-end;
+
+}
+
+.inPlacebtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    border-radius: 0px;
+    width: 180px;
+    padding: 10px;
+}
+
+
+
+.mat-icon-button {
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    border-radius: 50%;
+
+}
+
+
+//Address Box Part
+
+.addressBox {
+    display: flex;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 49.5vw;
+    left: 15vw;
+    top: 10vh;
+    height: 8vh;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+    padding: 0px 3vw;
+}
+
+// .innerAddbox{
+//     display: flex;
+//     height:45%;
+//     width:90%;
+//     font-size:16px;
+//     font-weight:500;
+//     align-items:center;
+//     color:#333232;
+// }
+
+
+.customerBox {
+    display: flex;
+    position: relative;
+    left: 15vw;
+    width: 55.5vw;
+    top: 12vh;
+    height: 80vh;
+    border: 1px solid #DCDCDC;
+    justify-content: space-between;
+
+}
+
+.innerCustleft {
+    width: 65%;
+    position: relative;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.custtxt {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+}
+
+.twoTxtfields {
+    position: relative;
+    top: 14px;
+    left: 1vw;
+    height: 15vh;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.twoTxtfields1 {
+    width: 48%;
+}
+
+.txtlabel {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.fullnameTxt {
+    height: 50px;
+}
+
+.addTxt {
+    display: flex;
+    position: relative;
+    height: 6vh;
+    top: 1vh;
+    font-size: 14px;
+    font-weight: 450;
+    align-items: center;
+    left: 1vw;
+    color: #0A0102;
+    width: 97%;
+}
+
+.txtarea {
+    display: flex;
+    position: relative;
+    height: 15vh;
+    top: 1vh;
+
+}
+
+.area {
+    position: relative;
+    left: 1vw;
+    width: 96%;
+    resize: none;
+    border: 1px solid #DCDCDC;
+    outline: none;
+}
+
+.nexttwoTxtfields {
+    position: relative;
+    left: 1vw;
+    height: 16vh;
+    top: 15px;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.radioBtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.typeBox {
+    display: flex;
+    position: relative;
+    width: 97%;
+    font-size: 16px;
+    color: #0A0102;
+    font-weight: 500;
+    align-items: center;
+    left: 1vw;
+    padding-bottom: 20px
+
+}
+
+.inradio3 {
+    position: relative;
+    display: flex;
+    left: 1vw;
+    justify-content: space-between;
+    width: 70%;
+    color: #0A0102;
+}
+
+.innerCustright {
+    width: 23.5%;
+    right: 3vw;
+    position: relative;
+    justify-content: space-between;
+}
+
+.addressBtn {
+    display: flex;
+    position: relative;
+    top: 10px;
+
+}
+
+.addbtninner {
+    color: #A03037;
+    height: 45px;
+    border: 2px solid #A03037;
+}
+
+.continueBtn {
+    display: flex;
+    position: relative;
+    top: 78%;
+    justify-content: flex-end;
+}
+
+.inContbtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    height: 42px;
+}
+
+
+
+//order
+.orderBox {
+    display: flex;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 49.5vw;
+    left: 15vw;
+    top: 14vh;
+    height: 8vh;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+    padding: 0px 3vw;
+}
+
+//order2
+.orderBox2 {
+    position: relative;
+    width: 55.5vw;
+    left: 15vw;
+    top: 16vh;
+    // height: 38vh;
+    border: 1px solid lightgray;
+}
+
+.orderTxt {
+    display: flex;
+    position: relative;
+    left: 3vw;
+    width: 90%;
+    height: 10vh;
+    align-items: center;
+    color: #333232;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.orderData {
+    position: relative;
+    left: 3vw;
+    display: flex;
+    width: 90%;
+    height: 20vh;
+}
+
+.orderimgBox {
+    display: flex;
+    position: relative;
+    top: 10px;
+    height: 16vh;
+    width: 15%;
+}
+
+.immgorder {
+    width: 80%;
+
+}
+
+.orderdataBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: 16vh;
+}
+
+.titleorder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 16vh;
+    width: 90%;
+    left: 2vw;
+
+}
+
+.bookttlorder {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 5vh;
+    font-size: 20px;
+    font-weight: 550;
+
+}
+
+.authttlorder {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 450;
+    height: 5vh;
+    color: #9D9D9D;
+}
+
+.priceorder {
+    display: flex;
+    position: relative;
+    width: 27%;
+    height: 6vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discpriceorder {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.actpriceorder {
+    font-size: 12px;
+    font-weight: 500;
+    color: #878787;
+    text-decoration-line: line-through;
+}
+
+.checkBtn {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    position: relative;
+    left: 7vw;
+    top: 1vh;
+    height: 6vh;
+    justify-content: flex-end;
+    padding-bottom: 35px;
+}
+
+.incheckbtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    border-radius: 0px;
+    width: 150px;
+}
+
+//Media Query
+
+@media (min-width: 721px) and (max-width: 1280px) {
+    .topBox {
+        left: 10vw;
+        width: 80vw;
+    }
+
+    .topinBox {
+        width: 120px;
+
+    }
+
+    ///
+    .cartBox {
+        width: 83vw;
+        left: 10vw;
+    }
+
+    .imgBox {
+        height: 120px;
+        width: 100px;
+    }
+
+    .addressBox {
+        width: 77vw;
+        left: 10vw;
+    }
+
+    //
+    .customerBox {
+        left: 10vw;
+        width: 83vw;
+
+    }
+
+    //order
+    .orderBox {
+        width: 77vw;
+        left: 10vw;
+    }
+    .orderBox2 {
+        width: 83vw;
+        left: 10vw;
+    }
+    
+    .orderData {
+        width: 90%;
+    }
+    
+    .immgorder {
+        width: 80px;
+    
+    }
+    .priceorder {
+        width: 150px;
+    }
+    
+    .checkBtn {
+        width: 76vw;
+    }
+    
+    .incheckbtn {
+        width: 170px;
+        height: 7vh;
+    }    
+
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+    .topBox {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    .topinBox {
+        width: 120px;
+
+    }
+
+    .cartBox {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    .imgBox {
+        height: 120px;
+        width: 100px;
+    }
+
+    .cartQty {
+        padding: 5px 10px 5px 10px;
+    }
+
+    .inPlacebtn {
+        width: 120px;
+    }
+
+    .addressBox {
+        width: 84vw;
+        left: 5vw;
+    }
+
+    //
+    .customerBox {
+        left: 5vw;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .innerCustleft {
+        width: 84vw;
+        position: relative;
+        top: 8px;
+    }
+
+    .inradio3 {
+        width: 50vw;
+    }
+
+    .innerCustright {
+        display: flex;
+        position: relative;
+        width: 81vw;
+        left: 4vw;
+        margin-bottom: 15px;
+    }
+
+    .addressBtn {
+        top: 0px;
+
+    }
+
+    .continueBtn {
+        top: 1px;
+        width: 120px;
+
+    }
+    
+    //order
+    .orderBox {
+        width: 84vw;
+        left: 5vw;
+    }
+    
+    .orderBox2 {
+        width: 90vw;
+        left: 5vw;
+    }
+    
+    .orderData {
+        width: 90%;
+    }
+    
+    .orderimgBox {
+        width: 80px;
+    }
+    
+    .immgorder {
+        width: 70px;
+    
+    }
+    
+    .titleorder {
+        left: 3vw;
+    
+    }
+    
+    .priceorder {
+        width: 150px;
+    }
+    
+    .checkBtn {
+        width: 90%;
+        height: 10vh;
+    }
+    
+    .incheckbtn {
+        width: 120px;
+        height: 7vh;
+    }
+    
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .topBox {
+        left: 5vw;
+        width: 80vw;
+    }
+
+    .topinBox {
+        width: 120px;
+
+    }
+
+    //
+    .cartBox {
+        width: 90vw;
+        left: 5vw;
+        height: 250px;
+    }
+
+    .imgBox {
+        height: 120px;
+        width: 100px;
+    }
+
+    .incdecBox {
+        width: 200px;
+    }
+
+    .signs {
+        height: 25px;
+        line-height: 25px;
+        width: 25px;
+    }
+
+    .cartQty {
+        padding: 5px 10px 5px 10px;
+    }
+
+    .removebtn {
+        position: relative;
+        left: 2vw;
+    }
+
+    .inPlacebtn {
+        width: 120px;
+    }
+
+    .addressBox {
+        width: 84vw;
+        left: 5vw;
+    }
+
+    .customerBox {
+        left: 5vw;
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .innerCustleft {
+        width: 84vw;
+        position: relative;
+        top: 8px;
+    }
+
+    .custtxt {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: #333232;
+    }
+
+    .twoTxtfields {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    ::ng-deep .mat-mdc-text-field-wrapper {
+        height: 40px !important;
+        flex: auto;
+        width: 100% !important;
+    }
+
+    ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+        padding-top: 8px !important;
+        padding-bottom: 0px !important;
+    }
+
+    ::ng-deep .mat-mdc-form-field-infix {
+        min-height: 40px !important;
+    }
+
+    .twoTxtfields1 {
+        width: 100%;
+    }
+
+    .txtlabel {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .fullnameTxt {
+        height: 50px;
+    }
+
+    .addTxt {
+        height: 6vh;
+        width: 97%;
+    }
+
+    .txtarea {
+        height: 10vh;
+        top: 0px;
+
+    }
+
+    .nexttwoTxtfields {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .typeBox {
+        display: flex;
+        position: relative;
+        width: 97%;
+        top: 8px;
+       
+    }
+
+    .inradio3 {
+        width: 50vw;
+        height: auto;
+    }
+
+    .innerCustright {
+        display: flex;
+        position: relative;
+        width: 81vw;
+        left: 4vw;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .addressBtn {
+        top: 0px;
+
+    }
+
+    .addbtninner {
+        height: 35px;
+    }
+
+    .continueBtn {
+        top: 1px;
+        width: 100px;
+
+    }
+
+    .inContbtn {
+        height: 35px;
+    }
+    
+    //order
+    .orderBox {
+        width: 84vw;
+        left: 5vw;
+    }
+    
+    .orderBox2 {
+        width: 90vw;
+        left: 5vw;
+    }
+    
+    .orderimgBox {
+        width: 80px;
+    }
+    
+    .immgorder {
+        width: 70px;
+    
+    }    
+    
+    .titleorder {
+        left: 3vw;
+    
+    }
+    
+    .priceorder {
+        width: 150px;
+    }
+    
+    .checkBtn {
+        top: 0vh;
+        height: 8vh;
+    }
+    
+    .incheckbtn {
+        width: 110px;
+    }
+    
+}

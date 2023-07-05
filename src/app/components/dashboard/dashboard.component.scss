@@ -1,0 +1,327 @@
+.headBox {
+    display: flex;
+    flex-Direction: column;
+    position:relative;
+    height: 9vh;
+    width: 98vw;
+    background-Color: #A03037 !important;
+}
+
+.outHeadBox {
+    display: flex;
+    flex-Direction: row;
+    position: relative;
+    height: 100%;
+    width: 72vw;
+    left:14vw;
+    justify-Content:space-between;
+
+}
+.inHeadBox {
+    display: flex;
+    flex-Direction:row;
+    position: relative;
+    top: 15%;
+    height: 70%;
+    width: 50vw;
+}
+.bookimg {
+    display: flex;
+    position: relative;
+    justify-Content: space-between;
+    width:140px;
+    top:3px;
+    align-Items: center;
+    height: 80%;
+    cursor: pointer;
+
+}
+.booktxt {
+    position: relative;
+    left: 2px;
+    color: white;
+    font-Size: 20px;
+    cursor: pointer;
+
+}
+.field {
+    display: flex;
+    width: 100% !important;
+}
+.innerfield{
+    border:none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+
+}
+.searchicon{
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+    width: 50px;
+    left: 2px;
+
+}
+.search {
+    display:flex;
+    flex-Direction:row;
+    position:relative;
+    left:50px;
+    width:68%;
+    justify-content:center;
+    background-Color:#FCFCFC;
+    border-Radius:5px;
+
+}
+
+.icons {
+    display: flex;
+    flex-Direction: row;
+    align-Items: center;
+
+}
+.Iconlogo {
+    display: flex;
+    flex-Direction: column;
+    justify-Content: space-between;
+    align-Items: center;
+    color:#FCFCFC;
+    width:50%;
+    border-Left: 1px solid #8F2B28;
+    border-Right: 1px solid #8F2B28;
+}
+
+
+.icontxt{
+    display:flex;
+    position:relative;
+    justify-Content:center;
+    align-items: center;
+    width:80px;
+    font-size: 14px;
+    height: 16px;
+}
+.footer{
+    display: flex;
+    position: relative;
+    top: 84.4vh;
+    width: 98vw;
+    background-color: #2E1D1E;
+}
+.innerFooter{
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: 15vw;
+    height: 45px;
+    color: #FCFCFC;
+}
+
+::ng-deep .mat-badge-content {
+    background: #A03037 !important;
+    position: relative;
+    font-size: 12px !important;
+    color: #f3ebeb;
+    // border:1px solid #FCFCFC;
+    width: 15px !important;
+    height: 16px !important;
+    right: 10px !important;
+}
+
+
+///profile pop-up CSS
+ 
+.toolBarHead{
+    background-Color: #A03037 !important;
+}
+.smallIcon{
+    display: flex;
+    flex-direction: row;
+    color: #878787;
+    margin: 10px 10px;
+    align-items: center !important;
+    background-color: transparent;
+    border: transparent;
+}
+.imgsize{
+    width: 28px;
+    height: 30px;
+    
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    color: #878787;
+    margin: 5px 5px;
+    align-items: center !important;
+    background-color: transparent;
+    border: transparent;
+}
+.menuBox{
+    position: relative;
+    width: 35vh;
+    height: 36vh;
+}
+.innerMenuBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 28vh;
+    left:1vw;
+    height: 30vh;
+}
+.hellotxt{
+    position: relative;
+    left: 1vw;
+}
+.popbtns{
+    height: 6vh;
+    display: flex;    
+    position: relative;
+    top: 2vh;
+}
+.smallIcon img{
+    position: relative;
+    left: 3px;
+}
+.powtxt{
+    position: relative;
+    left: 15px;
+
+}
+.logoutBtn{
+    padding: 0px 36px;
+    margin: 10px 10px;
+    border: 1px solid #A03037 !important;
+    color: #A03037;
+}
+
+//Media Queries
+
+@media (min-width: 721px) and (max-width: 1280px){
+    .outHeadBox {
+        position: relative;
+        width: 85vw;
+        left:7vw;   
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%; 
+        height: 70%;
+    }
+    .bookimg {
+        width: 130px;    
+    }
+    .booktxt {
+        position: relative;
+        left: 5px;
+        font-size: 18px;   
+    }   
+    .search {
+        position:relative;
+        left:25px;
+        width:40vw;     
+    } 
+    .searchicon{
+        width: 50px;    
+    }
+    .icons {
+        position: relative;
+        width: 120px; 
+        // right: 20px;  
+    }
+    .innerFooter{
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+
+@media (min-width: 481px) and (max-width: 720px){
+    .outHeadBox {
+        position: relative;
+        width: 90vw;
+        left:1vw;    
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 130px;    
+    }
+    .booktxt {
+        // display: none; 
+        font-size: 18px;   
+    }   
+    .search {
+        position:relative;
+        left:15px;
+        width:30vw;     
+    } 
+    .searchicon{
+        width: 50px;    
+    }
+    .icons {
+        position: relative;
+        width: 100px;   
+    }
+    .innerFooter{
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+@media (min-width: 320px) and (max-width: 480px){
+    .outHeadBox {
+        position: relative;
+        width:85vw;
+        left:3vw;    
+    }
+    .inHeadBox {
+        display: flex;
+        position: relative;
+        width: 70vw;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 60px;    
+    }
+    .booktxt {
+        display: none;    
+    } 
+    .search {
+        width:30px;     
+        left:15px;
+        width:30vw;    
+    } 
+    .searchicon{  
+        display: flex;
+        background-color: #FCFCFC;
+        border-radius: 24%;  
+    }
+    .icons {
+        position: relative;
+        width: 100px; 
+    
+    }
+    .innerFooter{
+        left: 1vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+
+
