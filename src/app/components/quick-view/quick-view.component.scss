@@ -102,7 +102,7 @@
   }
   
   ::ng-deep .btnbag {
-    width: 165px;
+    width: 195px;
     font-size: 15px;
     font-family: normal normal medium 22px/27px Lato;
     background-color: #A03037 !important;
@@ -112,7 +112,7 @@
   }
   
   ::ng-deep .btnwish {
-    width: 165px;
+    width: 195px;
     font-size: 15px;
     font-family: normal normal medium 22px/27px Lato;
     background-color: #333333 !important;
@@ -280,8 +280,8 @@
     flex-Direction: column;
     position: relative;
     background-Color: #F5F5F5;
-    top: 10px;
-    height: 180px;
+    top: 30px;
+    height: 380px;
     font-Weight: 500;
     font-Size: 12px;
   
@@ -292,8 +292,12 @@
     flex-Direction: column;
     position: relative;
     width: 95%;
-    font-size: 18px;
+    font-size: 13px;
     left: 15px;
+  }
+  .overalltxt{
+    padding-top: 15px;
+    //padding-left: 10px;
   }
   
   .star5Box {
@@ -301,7 +305,8 @@
     position: relative;
     justify-content: space-between;
     width: 120px;
-    padding: 10px;
+    right: 10px;
+    top:-10px
   
   }
   
@@ -339,13 +344,16 @@
     height: 30px !important;
     background-color: #3371B5 !important;
     color: #FFFFFF !important;
+    border: none;
+    width: 76px;
+    height: 24px;
   
   }
   
   //User review box
   .reviewbox {
     position: relative;
-    top: 15px;
+    top: 40px;
     height: 100px;
     margin-bottom: 5px;
   }
@@ -595,12 +603,14 @@
       height: 24px !important;
       width: 20px;
       font-size: 13px;
+      border: none;
     }
   
     //
     .reviewbox {
+      padding-top: 20%;
       position: relative;
-      top: 6px;
+      top: 100px;
     }
   
     .yellow5star {
@@ -833,7 +843,7 @@
     //
     .reviewbox {
       position: relative;
-      top: 6px;
+      top: 16px;
     }
   
     .yellow5star {
@@ -1050,7 +1060,7 @@
     //
     .reviewbox {
       position: relative;
-      top: 6px;
+      top: 16px;
     }
   
     .yellow5star {
