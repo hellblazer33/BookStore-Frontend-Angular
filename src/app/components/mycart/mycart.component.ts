@@ -5,6 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { HttpService } from 'src/app/Services/httpService/http.service';
 import { CartService } from 'src/app/Services/cartService/cart.service';
+import { Orderservice } from 'src/app/Services/orderService/order.service';
+import { AddressService } from 'src/app/Services/addressService/address.service';
 
 @Component({
   selector: 'app-mycart',
@@ -30,17 +32,36 @@ export class MycartComponent implements OnInit {
    address: string='';
    city: string='';
    state: string='';
+   quantity = 1;
   
 
    typeId:  Number=0;
   
    userId:any;
+   
+ 
+   
+ 
+   addressArray: any = [];
+ 
+   addressType: any;
+   
+   addressId: any;
+   noofAddress: Number=0;
+   details: any;
+   addval: any;
+   subscription: any;
+   cartId: any;
+   takeCartId: Number=0;
+   cartCount: any;
+ 
+   hideBox = false;
   
 
 
 
   constructor(private cart: CartService, private httpservice: HttpService,
-    private _snackbar: MatSnackBar, private router: Router
+    private _snackbar: MatSnackBar, private router: Router,private orderservice:Orderservice,private addressservice:AddressService
     ) {
 
   }
@@ -49,6 +70,12 @@ export class MycartComponent implements OnInit {
     this.bookId = localStorage.getItem('BookId');
     this.userId=localStorage.getItem('UserId');
     this.getCartDetails();
+    // this.getCustomerDetails();
+    this.getAddresses();
+    this.addressId = localStorage.getItem('addressId');
+    this.cartId = localStorage.getItem('cartId');
+
+    
 
   }
   // Get Cart Items
@@ -64,10 +91,15 @@ export class MycartComponent implements OnInit {
     });
   }
 
-
-  openAddress() {
-    this.hideButton = false,
-      this.hideShowAddress = false
+  removeFromCart(cartId: any) {
+    console.log(cartId)
+    this.cart.deleteFromCart(cartId).subscribe((response: any) => {
+      console.log("Removed from cart", response);
+      //i have called getcartdetails() to get all cart array
+      // this.getCartDetails();
+      this._snackbar.open("Item Removed From Cart", "Close", { duration: 3000 })
+      
+    })
   }
 
   openContinue() {
@@ -77,9 +109,50 @@ export class MycartComponent implements OnInit {
     console.log(this.mobileNumber)
 
     //Add address API
- 
+    let data = {
+      // fullName: this.fullName,
+      // mobilileNumber: this.mobileNumber,
+      address: this.address,
+      city: this.city,
+      state: this.state,
+      typeId: Number(this.typeId)
+    }
+
+    this.addressservice.addAddress(data).subscribe((response: any) => {
+      console.log("Address Added Successfully", response)
+      this.getAddresses();
+    })
 
   }
+
+  orderConfirmed() {
+    // Add order API
+    // console.log(this.addressId)
+    // console.log(this.bookId)
+    // console.log(this.quantity)
+    // console.log(this.userId)
+
+    // let data = {
+    //   userId:this.userId,
+    //   addressId: this.addressId,
+    //   bookId: this.bookId,
+    //   quantity:this.quantity
+    // }
+    // this.orderservice.addOrder(data).subscribe((response: any) => {
+    //   console.log(response)
+
+      
+    // })
+
+    this.router.navigate(['/dashboard/orderplaced'])
+  }
+
+  openAddress() {
+    this.hideButton = false,
+      this.hideShowAddress = false
+  }
+
+ 
 
 
 
@@ -97,7 +170,25 @@ export class MycartComponent implements OnInit {
     }
   }
 
+  getAddresses() {
+    this.addressservice.getAddresses().subscribe((response: any) => {
+      console.log("Retrived all the Addresses", response);
+      this.addressArray = response.response;
+      this.noofAddress = response.response.length;
+      console.log('Array of the Address: ', this.addressArray);
+      console.log('Total number of Addresses :', this.noofAddress);
 
+      this.addressArray = this.addressArray.filter((response: any) => {
+        localStorage.setItem('addressId',response.addressId)
+        this.addressId = response.addressId
+
+      })
+
+      this.fullName = localStorage.getItem('fullName');
+      console.log('fullName is: ', this.fullName);
+      this.mobileNumber = localStorage.getItem('mobileNumber');
+    })
+  }
 
 
   addNewAddress() {
@@ -108,4 +199,6 @@ export class MycartComponent implements OnInit {
     this.state = '';
     this.typeId =new Number;
   }
+
+  
 }

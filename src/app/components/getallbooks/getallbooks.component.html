@@ -15,7 +15,7 @@
 
     <div class="display">
         <!-- Here in filter pipe it'll filter searched result in the variable searchBook  -->
-        <mat-card class="bookBox" *ngFor="let book of bookArray" (click)="quickVeiwPage(book)">
+        <mat-card class="bookBox" *ngFor="let book of bookArray | filterpipe: searchBook | paginate: { itemsPerPage: 4, currentPage: p }" (click)="quickVeiwPage(book)">
             <div class="imageBox">
                 <div class="inimageBox">
                     <img class="image" src="/assets/dont.png" >
@@ -58,5 +58,7 @@
             </div>
         </mat-card>        
     </div>
-    
+    <div class="pagination">
+        <pagination-controls (pageChange)="p = $event" class="mypage"></pagination-controls>
+    </div>
 </div>

@@ -26,12 +26,14 @@ export type IaddToWishlist = {
     bookId: Number
 }
 export interface IaddOrder {
+    userId:Number
     addressId: Number,
     bookId: any
+    quantity: Number
 }
 export interface IaddAddress {
-    fullName: string,
-    mobilileNumber: string,
+    // fullName: string,
+    // mobilileNumber: string,
     address: string,
     city: string,
     state: string,

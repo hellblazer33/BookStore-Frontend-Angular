@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { timer } from 'rxjs';
+import { DataService } from 'src/app/Services/dataService/data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   interval:any
   
 
-  constructor(private router:Router) {
+  constructor(private router:Router,private dataservice:DataService) {
     this.userId=localStorage.getItem('UserId')
    }
 
@@ -54,6 +55,14 @@ export class DashboardComponent implements OnInit {
   navOrderPage() {
     this.router.navigate(['/dashboard/myorder'])
   }
+
+  searchBook(event: any) {
+    let searchResult = {
+      type: 'search',
+      dataResult: [event.target.value]
+    }
+    return this.dataservice.changeMessage(searchResult)
+  } 
 
 }
 

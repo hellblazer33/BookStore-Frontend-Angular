@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookServiceService } from 'src/app/Services/bookService/book-service.service'; 
+import { DataService } from 'src/app/Services/dataService/data.service';
 
 
 @Component({
@@ -19,10 +20,16 @@ export class GetallbooksComponent implements OnInit {
   subscription:any;
   p=1;
 
-  constructor(private book: BookServiceService,private router:Router) { }
+  constructor(private book: BookServiceService,private router:Router,private dataservice:DataService) { }
   
   ngOnInit(): void {
     this.getallbooks();
+    this.subscription=this.dataservice.currentMessage.subscribe(message=>{
+      this.message=message;
+    //now storing the data in the variable
+    this.searchBook=message.dataResult[0];
+    console.log(this.searchBook);
+    })
 
     // Performing Pipe Filter Functionality here 2. It is my parent component (step 1. in data service)
 

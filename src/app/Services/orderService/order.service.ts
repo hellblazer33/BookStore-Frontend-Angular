@@ -41,6 +41,6 @@ export class Orderservice {
         'Authorization':'Bearer '+this.token
       })
     }
-    return this.httpservice.PostService('/Order/Add',reqdata,true,header)
+    return this.httpservice.PostService('/Orders/Order',reqdata,true,header)
   }
 }

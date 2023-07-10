@@ -79,8 +79,8 @@ display: flex;
     font-size: 500px;
     width: 100%;
     height: 10%;
-    top: 1vh;
-    padding-top: 25px;
+    top: 3vh;
+    padding-bottom: 65px;
 
 }
 ::ng-deep .twoBtn1{
@@ -93,6 +93,7 @@ display: flex;
     background-color: transparent;
     border-color: transparent;
     color: #0A0102;
+    text-decoration: underline;
 }
 ::ng-deep .twoBtn2{
     color: #878787 !important;
@@ -113,12 +114,16 @@ display: flex;
     background-color: transparent;
     border-color: transparent;
     width: 100%;
-    height: 20%;
-    top: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    height: 15%;
+    top: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 
 } 
+
+mat-error::ng-deep {
+    padding-left:80px;
+}
 .txtboxlbl{
     font-size: 12px;
     font-weight: 500;
@@ -158,7 +163,7 @@ display: flex;
     justify-content: center;
     width: 100%;
     height: 10%;
-    top: 4vh;
+    top: 5vh;
 }
 ::ng-deep .signup{
     border: none;

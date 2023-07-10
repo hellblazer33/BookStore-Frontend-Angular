@@ -23,6 +23,8 @@ import { QuickViewComponent } from './components/quick-view/quick-view.component
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
+import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { MyorderComponent } from './components/myorder/myorder.component';
     QuickViewComponent,
     MywishlistComponent,
     MycartComponent,
-    MyorderComponent
+    MyorderComponent,
+    FilterpipePipe,
+    OrderplacedComponent
     
   ],
   imports: [

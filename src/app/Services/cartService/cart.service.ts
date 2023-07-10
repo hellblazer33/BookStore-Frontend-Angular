@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpService/http.service';
-import { IaddToCart } from '../typeInterface';
+import { IaddToCart, IdeleteFromCart } from '../typeInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -47,5 +47,16 @@ export class CartService {
       })
     }
     return this.httpservice.PostService('/Cart/Add', reqdata, true, header)
+  }
+
+  deleteFromCart(cartIddata: IdeleteFromCart) {
+    console.log(cartIddata)
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.DeleteService('/Cart/Delete?cartId=' + cartIddata, true, header);
   }
 }

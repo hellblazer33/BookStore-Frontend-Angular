@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { WishlistserviceService } from './Services/wishlistService/wishlist.service';
@@ -21,7 +22,8 @@ const routes: Routes = [
     {path:'quickview/:bookId',component:QuickViewComponent},
     {path:'mywishlist/:userId',component:MywishlistComponent},
     {path:'mycart/:userId',component:MycartComponent},
-    {path:'myorder',component:MyorderComponent}
+    {path:'myorder',component:MyorderComponent},
+    {path:'orderplaced',component:OrderplacedComponent}
   ]
 }
 ]
